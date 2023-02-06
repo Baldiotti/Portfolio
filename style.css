@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,8 @@ body {
 }
 
 header {
+    position: fixed;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -23,9 +26,12 @@ header {
     height: 80px;
 }
 
+
 .imgLogo {
     height: 70px;
+    margin-top: 3px;
 }
+
 
 .ulNavBar {
     list-style-type: none;
@@ -41,7 +47,7 @@ header {
     font-size: 12px;
     padding: 5px 10px;
     border-radius: 10px;
-    transition: all .5s ease-in-out;
+    transition: transform .5s ease-in-out, background-color .5s ease-in-out;
 }
 
 .ulNavBar > li:hover {
@@ -50,3 +56,32 @@ header {
     cursor: pointer;
 }
 
+.btn-switch-theme {
+    margin-top: 5px;
+    position: relative;
+    top: 0;
+    left: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.dkTheme, .lgTheme {
+    top: 0;
+    left: 0;
+    height: 26px;
+    transition: opacity 0.5s, visibility 0.5s;
+}
+
+
+.dkTheme {
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.lgTheme {
+    position: absolute;
+    visibility: visible;
+    opacity: 1;
+}
