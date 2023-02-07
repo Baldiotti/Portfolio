@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
 
 * {
     margin: 0;
@@ -16,6 +15,16 @@ body {
     flex-direction: column;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*---------- Cabecalho ----------*/
+
 header {
     position: fixed;
     width: 100vw;
@@ -24,13 +33,18 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 80px;
+    background-color: white;
+    z-index: 1;
 }
+
 
 
 .imgLogo {
     height: 70px;
     margin-top: 3px;
+    margin-left: -50px;
 }
+
 
 
 .ulNavBar {
@@ -44,7 +58,7 @@ header {
 }
 
 .ulNavBar > li {
-    font-size: 12px;
+    font-size: 13px;
     padding: 5px 10px;
     border-radius: 10px;
     transition: transform .5s ease-in-out, background-color .5s ease-in-out;
@@ -55,6 +69,8 @@ header {
     background-color: #eaeaea;
     cursor: pointer;
 }
+
+
 
 .btn-switch-theme {
     margin-top: 5px;
@@ -73,7 +89,6 @@ header {
     transition: opacity 0.5s, visibility 0.5s;
 }
 
-
 .dkTheme {
     position: relative;
     visibility: hidden;
@@ -84,4 +99,278 @@ header {
     position: absolute;
     visibility: visible;
     opacity: 1;
+}
+
+
+/*---------- Home ----------*/
+
+.home {
+    height: 100vh;
+    width: 98vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30vh;
+}
+
+.home-conteudo {
+    width: 70vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto-home {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    width: 270px;
+    margin-left: 40px;
+}
+
+.txt-home-fix {
+    font-size: 20px;
+    color: #878787;
+    margin: 10px 0px;
+}
+
+.txt-home-nome {
+    font-size: 25px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.txt-home-nome::after {
+    content: '|';
+    opacity: 1;
+    animation: blinkCursor 1s infinite;
+}
+
+@keyframes blinkCursor {
+    0%, 100% {opacity: 1;}
+    50% {opacity: 0;}
+}
+
+
+
+.txt-home-link {
+    margin-left: -8px;
+}
+
+.txt-home-link > a {
+    filter: brightness(200%) grayscale(100%);
+}
+.txt-home-inst {
+    filter: invert(20%);
+}
+.txt-home-git {
+    filter: invert(30%);
+}
+
+.link-lkdn, .link-git, .link-inst {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 60px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: width .5s linear, filter .3s linear;
+}
+
+.link-lkdn:hover, .link-git:hover, .link-inst:hover {
+    width: 140px;
+    filter: none;
+}
+
+.txt-home-link {
+    display: flex;
+    flex-direction: row;
+}
+
+.img-home > img {
+    height: 250px;
+}
+
+
+
+.scroll-animation {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.scroll-animation > img {
+    height: 15px;
+    margin-top: 3px;
+}
+
+
+
+/*---------- Sobre mim ----------*/
+
+.sobre {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.sobre-conteudo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80vw;
+    gap: 50px;
+    padding: 20px;
+    border: 1px solid #dbdbdb;
+    border-radius: 20px;
+    background-color: #eaeaea;
+}
+
+.sobre-conteudo > img {
+    height: 250px;
+    border-radius: 20px;
+    border: 2px solid #dbdbdb;
+}
+
+.sobre-txt {
+    height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.sobre-txt > h2 {
+    font-weight: 400;
+    color: #878787;
+}
+
+.sobre-txt > p {
+    color: #606060;
+}
+
+
+/*---------- Projetos ----------*/
+
+
+
+.proj-conteudo {
+    display: grid;
+    grid-template-columns: 3fr;
+    gap: 40px;
+    height: 80vh;
+    width: 80vw;
+}
+
+.proj-conteudo > div {
+    background-color: #dbdbdb;
+    height: 70vh;
+    width: 25vw;
+    padding: 25px;
+    border-radius: 20px;
+    display: flex;
+    overflow: hidden;
+    transition: width 2s linear, height 2s linear, position linear 2s, z-index 2s linear 2s;
+}
+
+.linktree {
+    grid-column-start: 1;
+    grid-column-end: 1;
+}
+
+.linktree:active {
+    position: absolute;
+    z-index: 1;
+    width: 80vw;
+}
+
+.link-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20vw;
+    width: 80vw;
+}
+
+.img-lang {
+    margin-bottom: -22px;
+}
+
+.proj-link-txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 50vh;
+}
+
+.flex-res-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60vh;
+}
+
+.imagens-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn-func > img {
+    height: 30px;
+    width: 30px;
+}
+
+.maisMenos {
+    align-self: flex-end;
+    position: relative;
+    margin-bottom: -10px;
+}
+.menosHori {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 30px; 
+    transition: all .5s ease-in-out;
+}
+.menosVert {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 30px;
+    transition: all .5s ease-in-out;
+}
+
+.proj-link-resumo {
+    margin-top: 20px;
+    width: 260px;
+}
+
+.proj-img {
+    height: 440px;
+    margin-top: -30px;
+    margin-right: 20vw;
+}
+
+
+
+
+
+
+.calculadora {
+    grid-column-start: 2;
+    grid-column-end: 2;
+}
+
+.portal {
+    grid-column-start: 3;
+    grid-column-end: 3;
 }

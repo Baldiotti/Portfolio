@@ -1,6 +1,8 @@
 onload = () => {
     document.querySelector('.btn-switch-theme').onclick = () => switchTheme();
+    typeWriter(document.querySelector('.txt-home-nome'));
 };
+
 
 let Lg = document.querySelector('.lgTheme');
 let Dk = document.querySelector('.dkTheme');
@@ -25,4 +27,13 @@ const switchTheme = () => {
         }, 500);
     }
     cont++;
+}
+
+
+const typeWriter = (elemento) => {
+    const textoArray = elemento.innerHTML.split('');
+    elemento.innerHTML = '';
+    textoArray.forEach((letra, i) => {
+        setTimeout(() => elemento.innerHTML += letra, 100 * i)
+    });
 }
