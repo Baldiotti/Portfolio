@@ -10,25 +10,25 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="imagens/perfil/NavPerfil.png" alt="Foto Memoji" class="imgLogo">
-        </div>
+            <div class="logo">
+                <img src="imagens/perfil/NavPerfil.png" alt="Foto Memoji" class="imgLogo">
+            </div>
 
-        <nav class="navBar">
-            <ul class="ulNavBar">
-                <li class="navHome">Home</li>
-                <li class="navSobre">Sobre</li>
-                <li class="navProjetos">Projetos</li>
-                <li class="navContato">Contato</li>
-            </ul>
-        </nav>
+            <nav class="navBar">
+                <ul class="ulNavBar">
+                    <li class="navHome">Home</li>
+                    <li class="navSobre">Sobre</li>
+                    <li class="navProjetos">Projetos</li>
+                    <li class="navContato">Contato</li>
+                </ul>
+            </nav>
 
-        <div class="themeSwitch" id="themeSwitch">
-            <button class="btn-switch-theme">
-                    <img src="imagens/geral/switchLg.png" alt="Light" class="lgTheme">
-                    <img src="imagens/geral/switchDk.png" alt="Dark" class="dkTheme">
-            </button>
-        </div>
+            <div class="themeSwitch" id="themeSwitch">
+                <button class="btn-switch-theme">
+                        <img src="imagens/geral/switchLg.png" alt="Light" class="lgTheme">
+                        <img src="imagens/geral/switchDk.png" alt="Dark" class="dkTheme">
+                </button>
+            </div>
     </header>
 
     <main>
@@ -76,57 +76,105 @@
                 Apaixonado pelo Front-end, com curiosidade sobre o Back-end e grande vontade de me tornar Full Stack.<br>
                 Sou super detalhista e busco ser o mais fiel possível ao design projetado. Curiosidade não me falta e sempre procuro achar a melhor solução para o problema que me foi passado.
                 </p>
-
+                <div class="sobre-btn">
+                    <a href="curriculo.pdf" download><img src="imagens/geral/downloadLg.png" alt="Download Curriculo" class="sobre-btn-curriculo">Currículo</a>
+                    <p class="sobre-btn-email"><img src="imagens/redesSociais/emailHv.png" alt="Copiar Email">Copiar Email</p>
+                </div>
             </div>
             </div>
         </div>
 
         <div class="projetos">
-            <h1>Projetos</h1>
+            <h1 class="proj-titulo">Projetos</h1>
             <div class="proj-conteudo">
                 <div class="linktree">
-                    <div class="link-box">
-                        <div class="proj-link-txt">
-                            <div class="flex-res-btn">
-                                <h2>My LinkTree</h2>
-                                <p class="proj-link-resumo">Meu primeiro projeto pessoal, a realização dele foi com o intuito de aprimorar meu conhecimento tanto de HTML quanto de CSS, buscando deixa-lo totalmente responsivo.</p>
-
-                                
-                                <div class="imagens-btn">
-                                    <div class="img-lang">
-                                        <img src="imagens/geral/html.png" alt="Logo HTML5">
-                                        <img src="imagens/geral/css.png" alt="Logo CSS3">
-                                    </div>
-
-                                    <div class="maisMenos">
-                                        <img src="imagens/geral/maisHoriLg.png" alt="Icone para aumentar a aba" class="menosHori">
-                                        <img src="imagens/geral/maisVertiLg.png" alt="Icone para aumentar a aba" class="menosVert">
-                                    </div>
+                        <div class="lkt-txt">
+                                <div>
+                                    <a href="https://baldiotti.github.io/MyLinkTree/" target="_blank" class="lkt-titulo">My LinkTree <img src="imagens/geral/linkLg.png" alt="Link"></a>
                                 </div>
-                            </div>
+                                <div class="lkt-linguagens">
+                                    <div><p><img src="imagens/geral/html.png" alt="Logo HTML5">HTML 5</p></div>
+                                    <div><p><img src="imagens/geral/css.png" alt="Logo CSS3">CSS 3</p></div>
+                                </div>
+
+                                <p class="lkt-resumo">Meu primeiro projeto pessoal, a realização dele foi com o intuito de aprimorar meu conhecimento tanto de HTML quanto de CSS, buscando deixa-lo totalmente responsivo.</p>
                         </div>
-                        <img src="imagens/projetos/IMG_3918.PNG" alt="" class="proj-img">
+                    <div class="lkt-img-box">
+                        <a href="https://baldiotti.github.io/MyLinkTree/" target="_blank">
+                            <img src="imagens/projetos/MyLinkTree.PNG" alt="" class="lkt-img">
+                        </a>
                     </div>
                 </div>
                 <div class="calculadora">
-                    <div>
-                        <h2>Calculadora</h2>
-                        <p>Projeto desenvolvido com o intúito de aprender a lógica de programação em JavaScript.<br>Projeto feito com HTML5, CSS3 e JavaScript</p>
+                    <div class="calc-txt">
+                        <div>
+                            <a href="https://baldiotti.github.io/Calculadora/" target="_blank" class="calc-titulo"> <img src="imagens/geral/linkLg.png" alt="Link"> Calculadora</a>
+                        </div>
+
+                        <div class="calc-linguagens">
+                            <div><p><img src="imagens/geral/html.png" alt="">HTML 5</p></div>
+                            <div><p><img src="imagens/geral/css.png" alt="">CSS 3</p></div>
+                            <div><p><img src="imagens/geral/js.png" alt="">JavaScript</p></div>
+                        </div>
+
+                        <p class="calc-resumo">Projeto desenvolvido no periodo de férias de 2022, buscando melhorar meu conhecimento em JavaScript realizei o projeto com ajuda de videos da matéria de Desenvolvimento de Interfaces WEB da PUC.</p>
                     </div>
-                    <img src="imagens/projetos/IMG_3901.PNG" alt="">
+                    <div class="calc-img-box">
+                        <a href="https://baldiotti.github.io/Calculadora/" target="_blank">
+                            <img src="imagens/projetos/IMG_3901.PNG" alt="" class="calc-img">
+                        </a>
+                    </div>
                 </div>
                 <div class="portal">
-                    <div>
-                        <h2>Portal de Filmes</h2>
-                        <p>Projeto desenvolvido com o intúito de aprender a manipulação e comunicação de APIs.<br>Projeto feito com HTML5, CSS3 e JavaScript</p>
+                    <div class="port-txt">
+                        <div>
+                            <a href="https://baldiotti.github.io/PortalDeFilmes/" target="_blank" class="port-titulo">Portal de Filmes <img src="imagens/geral/linkLg.png" alt="Link"></a>
+                        </div>
+
+                        <div class="port-linguagens">
+                            <div><p><img src="imagens/geral/html.png" alt="">HTML 5</p></div>
+                            <div><p><img src="imagens/geral/css.png" alt="">CSS 3</p></div>
+                            <div><p><img src="imagens/geral/js.png" alt="">JavaScript</p></div>
+                        </div>
+
+                        <p class="port-resumo">Esse projeto foi uma recriação de um que foi feito no 1º periodo do meu curso de Engenharia de Software. Também feito nas ferias de 2022, com ele eu aprendi a trabalhar melhor com manipulação de APIs, além de ajudar a criar uma afinidade maior com o JavaScript e CSS.</p>
                     </div>
-                    <img src="imagens/projetos/PortalDeFilmes.png" alt="">
+                    <div class="port-img-box">
+                        <a href="https://baldiotti.github.io/PortalDeFilmes/" target="_blank">
+                            <img src="imagens/projetos/PortalDeFilmes.png" alt="" class="port-img">
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-        <div></div>
+        <div class="contato">
+            <h1 class="proj-titulo">Contato</h1>
+            <div>
+                <form action="https://formspree.io/f/mdoveepy"
+                    method="POST" class="cont-formulario">
+                    <label>
+                        <b>Nome:</b><br>
+                        <input type="name" name="name">
+                    </label>
+                    <label>
+                        <b>Email:</b><br>
+                        <input type="email" name="email">
+                    </label>
+                    <label>
+                        <b>Mensagem:</b><br>
+                        <textarea name="message" class="cont-mensagem"></textarea>
+                    </label>
+                    <button type="submit" class="cont-btn"><b>Enviar</b></button>
+                </form>
+                <img src="imagens/perfil/soquinho.png" alt="" class="perfil-form">
+            </div>
+        </div>
     </main>
+
+    <footer class="rodape">
+        <p>Desenvolvido por <a href="https://linkedin.com/in/augusto-baldiotti" target="_blank"><b>Augusto Baldiotti</b></a></p>
+    </footer>
 </body>
 </html>
