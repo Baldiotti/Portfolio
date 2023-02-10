@@ -9,6 +9,10 @@ document.querySelector('.navSobre').onclick = () => centraliza('.sobre')
 document.querySelector('.navProjetos').onclick = () => centraliza('.projetos')
 document.querySelector('.navContato').onclick = () => centraliza('.contato')
 document.querySelector('.sobre-btn-email').onclick = () => copiaTexto();
+document.querySelector('.themeSwitch').onclick = () => {document.body.classList.toggle('dark')}
+
+
+
 
 
 let Lg = document.querySelector('.lgTheme');
@@ -53,8 +57,20 @@ const centraliza = (e) => {
         sup.scrollIntoView({behavior: "smooth", block: "center"});
 }
 
+
+
 const copiaTexto = () => {
     let textoCopiado = "augustobaldiotti@hotmail.com"
     navigator.clipboard.writeText(textoCopiado);
     alert("O email foi copiado!!");
+}
+
+
+
+const matchDark = matchMedia('(prefers-color-scheme: dark)');
+if(matchDark.matches) {
+    cont++;
+    document.body.classList.toggle('dark');
+    Lg.style.cssText = fadeOut;
+    Dk.style.cssText = fadeIn;
 }
