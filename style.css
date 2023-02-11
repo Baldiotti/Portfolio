@@ -210,7 +210,7 @@ header {
     cursor: pointer;
     text-decoration: none;
     color: black;
-    transition: width .5s linear, filter .3s linear;
+    transition: width .4s linear, filter .3s linear;
     filter: var(--brilho-filtro) grayscale(100%);
 }
 .link-home:hover {
