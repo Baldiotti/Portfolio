@@ -14,14 +14,14 @@
 | Light Theme | Dark Theme |
 |----------|----------|
 | <img src="imagens/readme/PortfólioLight.png"/> |  <img src="imagens/readme/PortfólioDark.png"/> |
-<br>
+
 ## Tecnologias
 
 - ``HTML5``
 - ``CSS3``
 - ``JavaScript``
 - ``VS Code``
-<br>
+
 ## Sites
 
 - Icones -> [Icons8](https://icons8.com.br/) 
