@@ -6,16 +6,10 @@
     box-sizing: border-box;
 }
 
-body > * {
-    font-family: 'Inter', sans-serif;
-}
-
 body {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 98.8vw;
+    font-family: 'Inter', sans-serif;
     background-color: var(--cor-primaria);
+    overflow-x: hidden;
 }
 
 body {
@@ -49,6 +43,87 @@ main {
     align-items: center;
 }
 
+textarea {
+    resize: none;
+    padding: 5px;
+}
+
+/*---------- Animação ----------*/
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transition: opacity 1s, filter 1s, transform 1s;
+}
+
+.hiddenLinguagens {
+    transform: translateY(-100%);
+    transition: transform 1.7s;
+}
+
+.hiddenLeft {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: opacity 700ms, filter 700ms, transform 700ms;
+}
+
+.hiddenRight {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(100%);
+    transition: opacity 700ms, filter 700ms, transform 700ms;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+
+/*---------- Alerta ----------*/
+
+.alerta {
+    position: sticky;
+    align-self: flex-end;
+    right: 10px;
+    bottom: 10px;
+    width: 13vw;
+    display: grid;
+    place-items: center;
+    height: 7vh;
+    z-index: 10;
+    border: 1px solid var(--cor-borda);
+    border-radius: 15px;
+    background-color: var(--cor-secundaria);
+    opacity: 0;
+    filter: blur(2px);
+    transform: translateY(200%);
+}
+
+.alertaBox {
+    color: var(--cor-texto);
+}
+
+.alertaShow {
+    animation: alertaShowAnimation 6s ease-in-out;
+}
+
+@keyframes alertaShowAnimation {
+    0%, 100% {
+        opacity: 0;
+        filter: blur(2px);
+        transform: translateY(200%);
+    }
+    15%, 85% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateY(0);
+    }
+}
+
+
 
 /*---------- Cabecalho ----------*/
 
@@ -57,43 +132,37 @@ header {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    width: 98.8vw;
-    height: 70px;
+    justify-content: space-around;
+    max-height: 4.5em;
+    left: 0;
+    right: 0;
     background-color: var(--cor-primaria);
-    z-index: 1;
-    padding-inline: 14.4vw;
+    z-index: 5;
 }
 
 
 
 .imgLogo {
-    height: 70px;
-    margin-top: 3px;
-    padding: 10px 10px 10px 0px;
+    max-height: 4.5em;
+    padding: 0.5em;
 }
 
 
-
-.navBar {
-    margin-left: -3vw;
-}
 
 .ulNavBar {
     list-style-type: none;
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-    padding: 8px 10px;
+    gap: 1.25em;
+    padding: 0.5em 0.75em;
     border: 1px solid var(--cor-borda);
-    border-radius: 18px;
+    border-radius: 1.125em;
 }
 
 .ulNavBar > li {
     color: var(--cor-texto);
-    font-size: 13px;
-    padding: 5px 10px;
-    border-radius: 10px;
+    font-size: 0.875rem;
+    padding: 0.375em 0.625em;
+    border-radius: 0.625em;
     transition: transform .5s ease-in-out, background-color .5s ease-in-out;
 }
 
@@ -106,19 +175,14 @@ header {
 
 
 .btn-switch-theme {
-    margin-top: 5px;
     position: relative;
-    top: 0;
-    left: 0;
     border: none;
     background-color: transparent;
     cursor: pointer;
 }
 
 .dkTheme, .lgTheme {
-    top: 0;
-    left: 0;
-    height: 26px;
+    max-height: 2.25em;
     transition: opacity 0.3s, visibility 0.3s;
 }
 
@@ -255,9 +319,13 @@ header {
 /*---------- Sobre mim ----------*/
 
 .sobre {
-    height: 70vh;
+    margin-top: 10vh;
+    margin-bottom: 11vh;
+    height: 60vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .sobre-conteudo {
@@ -329,28 +397,55 @@ header {
     width: 25px;
 }
 
+.sobre-linguagens {
+    position: relative;
+    height: 16vh;
+    bottom: 3vh;
+    width: 68vw;
+    border: 1px solid var(--cor-borda);
+    border-style: none solid solid solid;
+    border-radius: 20px / 0px 0px 20px 20px;
+    background-color: var(--cor-secundaria);
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-inline: 50px;
+}
+
+.sobre-linguagens > img {
+    height: clamp(1em, 2em + 10vw, 3em);
+    
+}
+
 
 
 /*---------- Projetos ----------*/
 
+.projetos {
+    margin-top: 10vh;
+}
+
 .proj-titulo {
     color: var(--cor-texto);
     font-size: 40px;
-    margin-top: 100px;
+    margin-top: 70px;
 }
 
 .proj-conteudo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 80px;
+    justify-content: space-between;
     margin-top: 10vh;
-    height: 120vh;
+    height: 150vh;
 }
 
 
 
 .proj-nome {
+    position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -367,7 +462,7 @@ header {
     height: 250px;
     position: absolute;
     left: 0;
-    padding-left: 14.4vw;
+    z-index: 1;
 }
 .proj-txt-titulo {
     color: var(--cor-texto);
@@ -451,10 +546,9 @@ header {
 .calc-txt {
     left: auto;
     padding-left: 0;
-
     align-items: flex-end;
     right: 0;
-    padding-right: 14.4vw;
+    z-index: 2;
 }
 .calc-resumo {
     text-align: right;
@@ -547,14 +641,16 @@ header {
     margin-right: 6vw;
 }
 
-
+.cont-btn-enviando {
+    cursor: default;
+    background-color: #284D79;
+}
 
 /*---------- Rodape ----------*/
 
 .rodape {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     width: 100%;
     height: 8vh;
     border-top: 1px solid var(--cor-borda);
