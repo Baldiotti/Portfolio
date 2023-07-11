@@ -98,6 +98,19 @@ function showAlerta(info) {
     }, 6000);
 }
 
+
+let linguagens = document.querySelectorAll(".divLinguagens");
+linguagens.forEach((e) => {
+    e.addEventListener("mouseover", () => mostraNome(e.children[1]));
+    e.addEventListener("mouseout", () => mostraNome(e.children[1]));
+});
+
+function mostraNome(e) {
+    e.classList.toggle("mostraNome");
+}
+
+
+
 document
     .querySelector(".cont-formulario")
     .addEventListener("submit", function (event) {

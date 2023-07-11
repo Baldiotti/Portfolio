@@ -15,36 +15,40 @@
 
     <body>
         <header>
-            <div class="logo">
-                <img
-                    src="imagens/perfil/NavPerfil.png"
-                    alt="Foto Memoji"
-                    class="imgLogo"
-                />
-            </div>
-
-            <nav class="navBar">
-                <ul class="ulNavBar">
-                    <li id="home" class="navHome navItem">Home</li>
-                    <li id="sobre" class="navSobre navItem">Sobre</li>
-                    <li id="projetos" class="navProjetos navItem">Projetos</li>
-                    <li id="contato" class="navContato navItem">Contato</li>
-                </ul>
-            </nav>
-
-            <div class="themeSwitch" id="themeSwitch">
-                <button class="btn-switch-theme">
+            <div>
+                <div class="logo">
                     <img
-                        src="imagens/geral/switchLg.png"
-                        alt="Light"
-                        class="lgTheme"
+                        src="imagens/perfil/NavPerfil.png"
+                        alt="Foto Memoji"
+                        class="imgLogo"
                     />
-                    <img
-                        src="imagens/geral/switchDk.png"
-                        alt="Dark"
-                        class="dkTheme"
-                    />
-                </button>
+                </div>
+
+                <nav class="navBar">
+                    <ul class="ulNavBar">
+                        <li id="home" class="navHome navItem">Home</li>
+                        <li id="sobre" class="navSobre navItem">Sobre</li>
+                        <li id="projetos" class="navProjetos navItem">
+                            Projetos
+                        </li>
+                        <li id="contato" class="navContato navItem">Contato</li>
+                    </ul>
+                </nav>
+
+                <div class="themeSwitch" id="themeSwitch">
+                    <button class="btn-switch-theme">
+                        <img
+                            src="imagens/geral/switchLg.png"
+                            alt="Light"
+                            class="lgTheme"
+                        />
+                        <img
+                            src="imagens/geral/switchDk.png"
+                            alt="Dark"
+                            class="dkTheme"
+                        />
+                    </button>
+                </div>
             </div>
         </header>
 
@@ -96,24 +100,21 @@
             </div>
 
             <div class="sobre hidden">
+                <h1>Sobre mim</h1>
                 <div class="sobre-conteudo">
                     <img
                         src="imagens/perfil/PerfilEu.jpeg"
                         alt="Foto do Augusto Baldiotti"
                     />
                     <div class="sobre-txt">
-                        <h1>Sobre mim</h1>
-                        <h2>Belo Horizonte, Minas Gerais</h2>
                         <p>
-                            Olá, sou estudante de Engenharia de Software na
-                            Universidade PUC-Minas.<br />
-                            Apaixonado pelo Front-end, com curiosidade sobre o
-                            Back-end e grande vontade de me tornar Full
+                            Olá! Sou estudante de Engenharia de Software na
+                            PUC-Minas.<br />
+                            Apaixonado pelo Front-end, curioso sobre o Back-end
+                            e determinado a me tornar um desenvolvedor Full
                             Stack.<br />
-                            Sou super detalhista e busco ser o mais fiel
-                            possível ao design projetado. Curiosidade não me
-                            falta e sempre procuro achar a melhor solução para o
-                            problema que me foi passado.
+                            Sou detalhista e busco ser o mais fiel ao design
+                            projetado.
                         </p>
                         <div class="sobre-btn">
                             <a href="curriculo.pdf" download
@@ -134,29 +135,94 @@
                     </div>
                 </div>
                 <div class="sobre-linguagens hiddenLinguagens">
-                    <img src="imagens/linguagens/html5.svg" alt="Logo HTML 5" />
-                    <img src="imagens/linguagens/css3.svg" alt="Logo CSS 3" />
-                    <img
-                        src="imagens/linguagens/javascript.svg"
-                        alt="Logo Javascript"
-                    />
-                    <img
-                        src="imagens/linguagens/react.svg"
-                        alt="Logo React Js"
-                    />
-                    <img
-                        src="imagens/linguagens/tailwind.svg"
-                        alt="Logo Tailwind"
-                    />
-                    <img
-                        src="imagens/linguagens/bootstrap.svg"
-                        alt="Logo Bootstrap"
-                    />
-                    <img
-                        src="imagens/linguagens/jquery.svg"
-                        alt="Logo JQuery"
-                    />
-                    <img src="imagens/linguagens/swift.svg" alt="Logo Swift" />
+                    <a
+                        target="_blank"
+                        href="https://developer.mozilla.org/pt-BR/docs/Web/HTML"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/html5.svg"
+                            alt="Logo HTML 5"
+                        />
+                        <p class="nomeLinguagem"><u>HTML 5</u></p>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://developer.mozilla.org/pt-BR/docs/Web/CSS"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/css3.svg"
+                            alt="Logo CSS 3"
+                        />
+                        <p class="nomeLinguagem"><u>CSS 3</u></p>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/javascript.svg"
+                            alt="Logo Javascript"
+                        />
+                        <p class="nomeLinguagem"><u>JavaScritp</u></p>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://react.dev/"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/react.svg"
+                            alt="Logo React Js"
+                        />
+                        <p class="nomeLinguagem"><u>React Js</u></p>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://tailwindcss.com/"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/tailwind.svg"
+                            alt="Logo Tailwind"
+                        />
+                        <p class="nomeLinguagem"><u>Tailwind</u></p>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://getbootstrap.com/"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/bootstrap.svg"
+                            alt="Logo Bootstrap"
+                        />
+                        <p class="nomeLinguagem"><u>Bootstrap</u></p>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://jquery.com/"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/jquery.svg"
+                            alt="Logo JQuery"
+                        />
+                        <p class="nomeLinguagem"><u>JQuery</u></p>
+                    </a>
+                    <a
+                        target="_blank"
+                        href="https://www.apple.com/br/swift/"
+                        class="divLinguagens"
+                    >
+                        <img
+                            src="imagens/linguagens/swift.svg"
+                            alt="Logo Swift"
+                        />
+                        <p class="nomeLinguagem"><u>Swift</u></p>
+                    </a>
                 </div>
             </div>
 
@@ -335,7 +401,7 @@
                     <form class="cont-formulario">
                         <label>
                             <b>Nome:</b><br />
-                            <input type="name" name="name" id="name"/>
+                            <input type="name" name="name" id="name" />
                         </label>
                         <label>
                             <b>Email:</b><br />
@@ -346,7 +412,7 @@
                             <textarea
                                 name="message"
                                 class="cont-mensagem"
-								id="message"
+                                id="message"
                             ></textarea>
                         </label>
                         <button type="submit" class="cont-btn">
