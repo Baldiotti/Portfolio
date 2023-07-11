@@ -139,6 +139,7 @@ header {
 }
 
 header > div {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -217,6 +218,7 @@ header > div {
 
 .home {
     height: 88.9vh;
+    height: 88.9svh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -325,8 +327,9 @@ header > div {
 
 .sobre {
     margin-top: 18vh;
+    margin-top: 18svh;
     margin-bottom: 11vh;
-    margin-bottom: 21vh;
+    margin-bottom: 11svh;
     height: 60vh;
     width: clamp(10em, 90vw, 60em);
     display: flex;
@@ -412,7 +415,7 @@ header > div {
 
 .sobre-linguagens {
     position: relative;
-    width: clamp(17.5em, 70vw, 50em);
+    width: clamp(15em, 80vw, 50em);
     border: 1px solid var(--cor-borda);
     border-style: none solid solid solid;
     border-radius: 20px / 0px 0px 20px 20px;
@@ -465,24 +468,27 @@ header > div {
 /*---------- Projetos ----------*/
 
 .projetos {
-    min-width: 0em;
-    width: 60em;
-    max-width: 65em;
+    width: clamp(10em, 90vw, 60em);
     margin-top: 10vh;
+    margin-top: 10svh;
 }
 
 .proj-titulo {
     color: var(--cor-texto);
     font-size: 40px;
     margin-top: 70px;
+    margin-bottom: 10vh;
+    margin-bottom: 10svh;
 }
 
 .proj-conteudo {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 10vh;
+    gap: 10vh;
+    gap: 10svh;
     height: 150vh;
+    height: 150svh;
 }
 
 
@@ -493,6 +499,7 @@ header > div {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
+    width: clamp(10em, 90vw, 60em);
 }
 
 
@@ -527,39 +534,42 @@ header > div {
 }
 .proj-txt-lang > p {
     color: var(--cor-texto);
-    font-size: 12px;
+    font-size: clamp(0.5rem, 0.05rem + 1.25vw, 1rem);
     gap: 5px;
-    padding: 4px 15px;
+    padding: 4px clamp(0.5rem, 0.05rem + 1.25vw, 1rem);
     transition: scale .2s linear;
     cursor: default;
     border-radius: 15px;
     border: 1px solid var(--cor-borda);
+    background-color: var(--cor-secundaria);
 }
 .proj-txt-lang > p:hover {
     scale: 1.05;
 }
 .proj-txt-lang > p > img {
-    height: 30px;
+    width: clamp(1rem, 3vw, 2rem);
 }
 
 
 
 .proj-resumo {
+    width: clamp(10em, 47vw, 32em);
     color: var(--cor-texto);
-    width: 35vw;
-    padding: 15px 40px;
+    padding: 15px clamp(1em, 4vw, 2.5em);
     background-color: var(--cor-terciaria);
     border-radius: 10px;
     box-shadow: 5px 5px 20px -7px var(--shadow);
+    font-size: clamp(0.75rem, 0.1rem + 2vw, 1rem);
 }
 
 
 
 .proj-img {
+    width: clamp(10em, 47vw, 32em);
+    height: clamp(10em, 6em + 25vw, 20em);
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40vw;
     border: 1px solid var(--cor-borda);
     background-color: var(--cor-secundaria);
     border-radius: 10px;
@@ -571,14 +581,8 @@ header > div {
     scale: 1.1;
 }
 
-
-
-
-.lkt-proj {
-    padding: 20px;
-}
 .lkt-proj-img {
-    width: 28vw;
+    width: clamp(10em, 40vw, 23em);
 }
 
 
@@ -600,7 +604,7 @@ header > div {
     padding: 10px 0px;
 }
 .calc-proj-img {
-    width: 14vw;
+    width: clamp(10em, 25vw, 15em);
 }
 
 
@@ -608,9 +612,10 @@ header > div {
     padding: 30px;
 }
 .port-proj-img {
-    width: 29vw;
+    width: clamp(10em, 40vw, 23em);
     border-radius: 7px;
 }
+
 
 
 /*---------- Contato ----------*/
@@ -725,5 +730,44 @@ header > div {
     }
     .ulNavBar > li:active {
         animation: clicaMenu 1s;
+    }
+
+    .txt-home-fix {
+        width: 8em;
+    }
+
+    .proj-nome {
+        flex-direction: column;
+    }
+
+    .proj-resumo, .proj-img {
+        width: clamp(10em, 90vw, 60em);
+    }
+    .proj-txt {
+        height: clamp(10em, 6em + 40vw, 20em);
+        justify-content: flex-start;
+        gap: 1em;
+    }
+    
+    .proj-txt-lang{
+        margin-top: clamp(-20px, -20px + 1vw, 0px);
+    }
+
+    .proj-resumo {
+        margin-top: clamp(5em, 35vw, 9.5em);
+        margin-bottom: -2em;
+    }
+
+    .proj-img {
+        width: clamp(10em, 90vw, 50em);
+    }
+    .proj-img-box {
+        width: clamp(10em, 60vw, 40em);
+    }
+    .lkt-proj-img {
+        width: clamp(10em, 55vw, 40em);
+    }
+    .calc-proj-img {
+        width: clamp(7em, 30vw, 20em);
     }
 }
