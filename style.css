@@ -306,7 +306,7 @@ header > div {
 
 
 .scroll-animation {
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     display: flex;
     gap: 0.5em;
 }
@@ -360,16 +360,16 @@ header > div {
 }
 
 .sobre-txt {
-    height: clamp(6em, 30vw, 15em);
+    height: clamp(6em, 37vw, 15em);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .sobre-txt > p {
-    font-size: clamp(0.5rem, 0.1rem + 2vw, 1rem);
+    font-size: clamp(0.75rem, 0.1rem + 2vw, 1rem);
     color: var(--cor-texto);
-    line-height: clamp(1em, 3vw, 1.8em);
+    line-height: clamp(1.1em, 3vw, 1.8em);
 }
 
 
@@ -534,7 +534,7 @@ header > div {
 }
 .proj-txt-lang > p {
     color: var(--cor-texto);
-    font-size: clamp(0.5rem, 0.05rem + 1.25vw, 1rem);
+    font-size: clamp(0.75rem, 0.05rem + 1.25vw, 1rem);
     gap: 5px;
     padding: 4px clamp(0.5rem, 0.05rem + 1.25vw, 1rem);
     transition: scale .2s linear;
@@ -559,7 +559,7 @@ header > div {
     background-color: var(--cor-terciaria);
     border-radius: 10px;
     box-shadow: 5px 5px 20px -7px var(--shadow);
-    font-size: clamp(0.75rem, 0.1rem + 2vw, 1rem);
+    font-size: clamp(0.9rem, 0.1rem + 2vw, 1rem);
 }
 
 
@@ -622,7 +622,9 @@ header > div {
 
 .contato {
     height: 90vh;
+    height: 90svh;
     margin-top: 150px;
+    width: clamp(10em, 90vw, 60em);
 }
 
 .contato > div {
@@ -633,9 +635,10 @@ header > div {
 }
 
 .cont-formulario {
-    height: 50vh;
+    height: 50svh;
     margin-top: 7vh;
-    width: 35vw;
+    margin-top: 7svh;
+    width: clamp(10em, 12em + 25vw, 60em);
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -664,12 +667,14 @@ header > div {
 
 .cont-formulario > label > textarea {
     height: 15vh;
+    height: 15svh;
     padding-top: 3px;
 }
 
 
 .cont-btn {
     height: 5vh;
+    height: 5svh;
     border: none;
     color: var(--cor-terciaria);;
     background-color: #155aaa;
@@ -717,6 +722,8 @@ header > div {
 
 
 @media screen and (max-width: 640px) {
+
+    /*---------- Header ----------*/
     header > div {
         justify-content: space-around;
     }
@@ -732,14 +739,23 @@ header > div {
         animation: clicaMenu 1s;
     }
 
+    /*---------- Home ----------*/
     .txt-home-fix {
         width: 8em;
     }
 
+    /*---------- Projetos ----------*/
+    .proj-titulo {
+        margin-bottom: 15vh;
+        margin-bottom: 15svh;
+    }
+    .proj-conteudo {
+        height: 120vh;
+        height: 120svh;
+    }
     .proj-nome {
         flex-direction: column;
     }
-
     .proj-resumo, .proj-img {
         width: clamp(10em, 90vw, 60em);
     }
@@ -748,16 +764,13 @@ header > div {
         justify-content: flex-start;
         gap: 1em;
     }
-    
     .proj-txt-lang{
         margin-top: clamp(-20px, -20px + 1vw, 0px);
     }
-
     .proj-resumo {
         margin-top: clamp(5em, 35vw, 9.5em);
         margin-bottom: -2em;
     }
-
     .proj-img {
         width: clamp(10em, 90vw, 50em);
     }
@@ -769,5 +782,14 @@ header > div {
     }
     .calc-proj-img {
         width: clamp(7em, 30vw, 20em);
+    }
+
+    /*---------- Contato ----------*/
+    .cont-formulario {
+        width: clamp(10em, 90vw, 60em);
+    }
+    .contato > div > img {
+        position: absolute;
+        display: none;
     }
 }
