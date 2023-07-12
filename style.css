@@ -372,7 +372,7 @@ header > div {
 }
 
 .sobre-txt {
-    height: clamp(6em, 37vh, 15em);
+    height: clamp(6em, 37vw, 15em);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
