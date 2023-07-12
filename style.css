@@ -768,6 +768,10 @@ header > div {
     }
 
     /*---------- Projetos ----------*/
+    .proj-conteudo {
+        height: clamp(40em, 150vh, 75em);
+    }
+
     .proj-titulo {
         margin-bottom: 20vh;
         margin-bottom: 20svh;
@@ -787,7 +791,7 @@ header > div {
         margin-top: clamp(-20px, -20px + 1vw, 0px);
     }
     .proj-resumo {
-        margin-top: clamp(5em, 35vw, 9.5em);
+        margin-top: clamp(5em, 35vw, 12em);
         margin-bottom: -2em;
     }
     .proj-img {
