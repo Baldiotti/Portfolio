@@ -85,11 +85,16 @@ textarea {
 
 /*---------- Alerta ----------*/
 
-.alerta {
+.divAlerta {
     position: sticky;
+    display: flex;
+    flex-direction: row-reverse;
     bottom: 10px;
-    left: 86%;
-    width: 13vw;
+    margin-right: 10px;
+}
+
+.alerta {
+    width: clamp(8em, 5em + 20vw, 10em);
     display: grid;
     place-items: center;
     height: 7vh;
