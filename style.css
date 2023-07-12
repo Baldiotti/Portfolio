@@ -400,10 +400,11 @@ header > div {
 .sobre-btn > p, .sobre-btn > a {
     display: flex;
     align-items: center;
+    justify-content: space-around;
     gap: 0.75em;
     padding: 0.25em;
     border: 1px solid var(--cor-borda);
-    border-radius: 10px;
+    border-radius: clamp(5px,  2vw, 10px);
     cursor: pointer;
     transition: scale .2s linear;
 }
@@ -770,6 +771,11 @@ header > div {
     /*---------- Home ----------*/
     .txt-home-fix {
         width: 8em;
+    }
+
+    /*---------- Projetos ----------*/
+    .sobre-txt {
+        gap: 1.5vw;
     }
 
     /*---------- Projetos ----------*/
