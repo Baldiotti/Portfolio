@@ -6,11 +6,15 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 
 body {
     font-family: 'Inter', sans-serif;
     background-color: var(--cor-primaria);
-    overflow-x: hidden;
+    overflow-x: clip;
     align-self: center;
 }
 
@@ -351,7 +355,7 @@ header > div {
 
 .sobre-conteudo {
     display: flex;
-    align-items: center;
+    align-items: start;
     gap: clamp(1em, 5vw, 4em);
     padding: clamp(0.5rem, 5vw, 2rem) clamp(1rem, 5vw, 2rem);
     border: 1px solid var(--cor-borda);
@@ -491,7 +495,7 @@ header > div {
 .proj-conteudo {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10vh;
     gap: 10svh;
     height: 150vh;
@@ -633,8 +637,8 @@ header > div {
     margin-top: 19vh;
     margin-top: 19svh;
     width: clamp(10em, 90vw, 60em);
-    margin-bottom: -11vh;
-    margin-bottom: -11svh;
+    margin-bottom: -12vh;
+    margin-bottom: -12svh;
 }
 
 .cont-titulo {
@@ -764,15 +768,8 @@ header > div {
 
     /*---------- Projetos ----------*/
     .proj-titulo {
-        margin-bottom: 10vh;
-        margin-bottom: 10svh;
-    }
-    .proj-conteudo {
-        height: 145vh;
-        height: 145svh;
-        gap: 5vh;
-        gap: 5svh;
-        overflow-x: hidden;
+        margin-bottom: 20vh;
+        margin-bottom: 20svh;
     }
     .proj-nome {
         flex-direction: column;
@@ -806,6 +803,10 @@ header > div {
     }
 
     /*---------- Contato ----------*/
+    .contato {
+        margin-top: 25vh;
+        margin-top: 25svh;
+    }
     .cont-formulario {
         width: clamp(10em, 90vw, 60em);
     }
