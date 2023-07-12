@@ -372,7 +372,7 @@ header > div {
 }
 
 .sobre-txt {
-    height: clamp(6em, 37vw, 15em);
+    height: clamp(6em, 37vh, 15em);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -502,6 +502,7 @@ header > div {
     justify-content: space-between;
     gap: 10vh;
     gap: 10svh;
+    gap: clamp(2em, 10vh, 5em);
     height: 150vh;
     height: 150svh;
 }
@@ -780,9 +781,8 @@ header > div {
 
     /*---------- Projetos ----------*/
     .proj-conteudo {
-        height: clamp(40em, 150vh, 75em);
+        height: clamp(65em, 10em + 100vh, 75em);
     }
-
     .proj-titulo {
         margin-bottom: 20vh;
         margin-bottom: 20svh;
@@ -822,6 +822,7 @@ header > div {
     .contato {
         margin-top: 15vh;
         margin-top: 15svh;
+        margin-top: clamp(7em, 15vh,9em);
     }
     .cont-formulario {
         width: clamp(10em, 90vw, 60em);
