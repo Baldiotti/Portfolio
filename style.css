@@ -94,7 +94,11 @@ textarea {
     display: flex;
     flex-direction: row-reverse;
     bottom: 10px;
+    z-index: 10;
     margin-right: 10px;
+    overflow-y: hidden;
+    margin-bottom: 1vh;
+    margin-bottom: 1svh;
 }
 
 .alerta {
@@ -103,7 +107,6 @@ textarea {
     place-items: center;
     height: 7vh;
     height: 7svh;
-    z-index: 10;
     border: 1px solid var(--cor-borda);
     border-radius: 15px;
     background-color: var(--cor-secundaria);
@@ -632,13 +635,16 @@ header > div {
 /*---------- Contato ----------*/
 
 .contato {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
     height: 85vh;
     height: 85svh;
     margin-top: 19vh;
     margin-top: 19svh;
     width: clamp(10em, 90vw, 60em);
-    margin-bottom: -25vh;
-    margin-bottom: -25svh;
+    margin-bottom: 1vh;
+    margin-bottom: 1svh;
 }
 
 .cont-titulo {
@@ -657,7 +663,6 @@ header > div {
 }
 
 .cont-formulario {
-    height: 50svh;
     width: clamp(10em, 12em + 25vw, 60em);
     display: flex;
     flex-direction: column;
@@ -719,13 +724,13 @@ header > div {
 /*---------- Rodape ----------*/
 
 .rodape {
+    position: absolute;
+    margin-top: auto;
     display: grid;
     place-items: center;
     width: 100%;
     height: 8vh;
     height: 8svh;
-    margin-top: 9vh;
-    margin-top: 9svh;
     border-top: 1px solid var(--cor-borda);
 }
 
@@ -809,8 +814,8 @@ header > div {
 
     /*---------- Contato ----------*/
     .contato {
-        margin-top: 25vh;
-        margin-top: 25svh;
+        margin-top: 15vh;
+        margin-top: 15svh;
     }
     .cont-formulario {
         width: clamp(10em, 90vw, 60em);
